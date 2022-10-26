@@ -1,0 +1,328 @@
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --magenta: hsl(300, 69%, 71%);
+}
+
+
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(/src/bg-desktop.svg) no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+    background-color: var(--violet);
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.container {
+  
+   
+    width:  80vw;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+header {
+   
+    width: 800%;
+    height: max(10vh, 15vh);
+}
+
+.content-container {
+    max-height: 100%;
+    min-width: 100%;
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.mockup {
+    
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.mockup img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.content {
+
+    padding-left: 10px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    width: 40%;
+    height: 100%;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: black;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1rem, 2.2vw, 3rem);
+    max-width: 20ch;
+    letter-spacing: 0.2rem;
+}
+
+.content p {
+    font-size: clamp(0.8rem, 1.5vw, 1.4rem);
+    padding: min(2rem, 3rem) 0;
+    line-height: clamp(1.2rem, 2vw, 1.8rem);
+    max-width: 45ch;
+}
+
+.register {
+    height: 50px;
+    width: 200px;
+    background-color: white;
+    border-radius: 50px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size: 1.4rem;
+    color: var(--violet)
+}
+
+.register:hover {
+    background-color: var(--magenta);
+    color: white;
+    cursor: pointer;
+}
+
+.socials {
+  
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: max(10vh, 15vh);
+    padding-right: 4rem;
+    padding-bottom: 4rem;
+}
+
+i {
+    color: white;
+    height: 3rem;
+    width: 3rem;
+    border: 1px solid;
+    border-radius: 50%;
+    text-align: center;
+    padding: 1rem;
+    margin: 0.2rem;
+}
+
+i:hover {
+    color: var(--magenta);
+    cursor: pointer;
+}
+
+footer{ 
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 1rem; 
+}
+
+
+@media (max-width: 600px) {
+
+    body {
+        background: url(/src/bg-mobile.svg) no-repeat top fixed;
+        background-size: 100%;
+        background-color: var(--violet);
+    }
+
+    header {
+        width: 80%;
+        height: 8vh;
+    }
+    
+    header img {
+        width: 50%;
+        padding: 10px;
+    }
+    
+    .container {
+        
+    
+        width:  90vw;
+        height: 95vh;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+
+    .mockup {
+        display: flex;
+        flex-wrap: wrap;
+        height: 60%;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+    .mockup img {
+        max-width: 90%;
+    }
+
+    .content-container {
+        height: fit-content;
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: space-between;
+        justify-content: center;
+    }
+
+    .content {
+
+        flex: 1 1 auto;
+        padding-left: 10px;
+        padding-right: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: space-around;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+   
+    h1 {
+        margin-top: 60px;
+        max-width: 40ch;
+        font-size: 1.5rem;
+        align-self: center;
+        text-align: center;
+    }
+    
+    .content p {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        align-self: center;
+        text-align: center;
+    }
+
+    .socials {
+        height: 80px;
+        position: relative;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+
+    i {
+        color: white;
+        height: 2rem;
+        width: 2rem;
+        border: 1px solid;
+        border-radius: 50%;
+        text-align: center;
+        padding: 0.5rem;
+        margin: 0.2rem;
+    }
+
+    footer{ 
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 1rem; 
+    }
+
+    .register {
+        height: 50px;
+        width: 300px;
+        background-color: white;
+        align-self: center;
+        border-radius: 50px;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        font-size: 1rem;
+        color: var(--violet)
+    }
+ 
+}
+
+
+@media (min-width: 1440px) {
+    body {
+        background-image: none;
+        background-color: lightgrey;
+
+    
+    }
+
+    .container {
+       
+        background: url(/src/bg-desktop.svg) no-repeat center fixed;
+        background-color: var(--violet);
+    }
+
+
+}
+
+
+
+/*
+# Front-end Style Guide
+
+## Layout
+The designs were created to the following widths:
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Violet: hsl(257, 40%, 49%)
+- Soft Magenta: hsl(300, 69%, 71%)
+
+## Typography
+
+### Headings
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 600
+
+### Body
+
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400
+
+## Icons
+
+For the social icons, you can use a font icon library. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com/)
+- [IcoMoon](https://icomoon.io/)
+- [Ionicons](https://ionicons.com/)
+*/
